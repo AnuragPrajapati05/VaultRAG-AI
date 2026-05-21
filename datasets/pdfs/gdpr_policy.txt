@@ -1,0 +1,83 @@
+VAULTCORP ENTERPRISES — COMPLIANCE & LEGAL DIVISION
+GDPR & DATA PRIVACY POLICY — VERSION 2.3
+DOCUMENT ID: COMP-GDPR-2025-001 | CLASSIFICATION: INTERNAL
+EFFECTIVE DATE: MAY 25, 2025 (GDPR ANNIVERSARY REFRESH)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: SCOPE AND PURPOSE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This policy governs how VaultCorp Enterprises collects, processes, stores, and protects personal data in compliance with the General Data Protection Regulation (GDPR) (EU) 2016/679 and applicable national data protection laws.
+
+This policy applies to:
+  - All VaultCorp employees, contractors, and third-party processors
+  - All systems processing personal data of EU/EEA data subjects
+  - All company departments including HR, Finance, Engineering, and Sales
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: DATA SUBJECT RIGHTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Under GDPR, data subjects have the following rights, which VaultCorp must honor:
+
+2.1 RIGHT TO ACCESS — Data subjects may request a copy of their personal data within 30 days.
+2.2 RIGHT TO RECTIFICATION — Incorrect data must be corrected within 30 days of request.
+2.3 RIGHT TO ERASURE — "Right to be forgotten" — data must be deleted unless retention required by law.
+2.4 RIGHT TO DATA PORTABILITY — Data must be provided in machine-readable format (JSON/CSV).
+2.5 RIGHT TO OBJECT — Data subjects may object to processing for direct marketing.
+2.6 RIGHT TO RESTRICT PROCESSING — Processing may be restricted while accuracy disputes are resolved.
+
+Response SLA: All GDPR data subject requests must be acknowledged within 72 hours and fulfilled within 30 days.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: DATA CLASSIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SPECIAL CATEGORY DATA (highest protection):
+  - Health and medical records
+  - Biometric data
+  - Religious or political beliefs
+  - Trade union membership
+
+PERSONAL DATA (standard protection):
+  - Name, email, phone number
+  - IP addresses, location data
+  - Payroll and compensation data
+  - Performance review records
+
+PUBLIC DATA (minimal protection):
+  - Published job titles and departments
+  - General company information
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: BREACH NOTIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In the event of a personal data breach:
+  1. Identify and contain the breach immediately
+  2. Assess risk to data subjects within 2 hours
+  3. Report to Data Protection Authority (DPA) within 72 hours if risk is high
+  4. Notify affected individuals without undue delay if high risk
+
+Breach Register: All breaches, including near-misses, must be logged in the 
+Compliance Breach Register (maintained by Compliance Officer).
+
+INCIDENT INC-2045 (May 16, 2025): The engineering outage temporarily exposed 
+payroll data access logs. Compliance review concluded: no personal data exfiltrated; 
+breach notification to DPA not required. Documentation filed in audit_logs.csv.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: RETENTION POLICY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Employee Records:         7 years post-employment
+  Payroll Records:          7 years
+  Access Logs:              2 years
+  Incident Reports:         5 years
+  GDPR Request Records:     3 years after request fulfillment
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+APPROVED BY: Alexandra Reeves, Chief Compliance Officer
+DATA PROTECTION OFFICER: Thomas Engel, DPO
+NEXT MANDATORY REVIEW: November 2025
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

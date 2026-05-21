@@ -1,0 +1,11 @@
+deployment_id,timestamp,service,version,environment,deployed_by,status,duration_seconds,tests_passed,tests_failed,rollback_triggered,incident_ref,notes
+DEP-2245,2025-05-12T14:00:00Z,AuthService,v3.1.2,production,Alice Chen,SUCCESS,312,847,0,false,,Routine security patch
+DEP-2246,2025-05-12T15:30:00Z,PayrollService,v2.7.9,production,Kevin Huang,SUCCESS,287,1204,0,false,,Minor bug fixes
+DEP-2247,2025-05-13T14:00:00Z,ReportingService,v1.4.0,production,Emma Liu,SUCCESS,445,567,0,false,,New analytics features
+DEP-2248,2025-05-14T14:00:00Z,NotificationService,v2.2.1,production,Alice Chen,SUCCESS,198,312,0,false,,Email template update
+DEP-2249,2025-05-15T18:30:00Z,PayrollService,v2.8.1,production,Kevin Huang,FAILED_POST_DEPLOY,523,1189,15,true,INC-2045,CRITICAL: Unoptimized query caused DB connection pool exhaustion; Stage 4 (performance validation) was skipped; deployment was unauthorized per policy ENG-DEP-2025-001
+DEP-2250,2025-05-16T03:45:00Z,PayrollService,v2.8.0,production,Kevin Huang,SUCCESS,312,1204,0,false,INC-2045,Emergency rollback to v2.8.0 during INC-2045 recovery
+DEP-2251,2025-05-17T14:00:00Z,AuthService,v3.1.3,production,Alice Chen,SUCCESS,334,889,0,false,,Circuit breaker implementation for DB dependency
+DEP-2252,2025-05-19T14:00:00Z,MonitoringAgent,v1.8.0,production,Emma Liu,SUCCESS,156,234,0,false,,Lowered DB connection pool alert threshold to 80%
+DEP-2253,2025-05-20T14:00:00Z,APIGateway,v4.2.1,production,Henry Park,SUCCESS,267,1456,0,false,,Rate limiting improvements
+DEP-2254,2025-05-21T14:00:00Z,ComplianceService,v2.0.1,production,David Okafor,SUCCESS,389,678,0,false,,GDPR data retention automation

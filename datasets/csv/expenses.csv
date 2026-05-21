@@ -1,0 +1,16 @@
+expense_id,date,department,category,vendor,amount,approved_by,payment_status,invoice_number,notes
+EXP-10021,2025-04-02,Engineering,Software License,AWS,187300,Priya Nair,PAID,INV-AWS-20250402,Monthly cloud infrastructure
+EXP-10022,2025-04-03,Engineering,Hardware,Dell Technologies,42800,Priya Nair,PAID,INV-DELL-20250403,Server rack expansion
+EXP-10023,2025-04-05,Finance,Consulting,Deloitte,95000,Diana Forsythe,PAID,INV-DEL-20250405,Q1 audit preparation
+EXP-10024,2025-04-08,HR,Training,LinkedIn Learning,12400,Sarah Mitchell,PAID,INV-LKD-20250408,Enterprise license renewal
+EXP-10025,2025-04-10,Compliance,Legal,Morrison & Foerster LLP,48000,Alexandra Reeves,PAID,INV-MF-20250410,GDPR compliance consulting
+EXP-10026,2025-04-15,Engineering,Security,CrowdStrike,28900,Marcus Bell,PAID,INV-CS-20250415,EDR platform renewal
+EXP-10027,2025-04-18,Finance,Software,Oracle,67500,Diana Forsythe,PAID,INV-ORC-20250418,ERP maintenance
+EXP-10028,2025-04-22,HR,Recruitment,LinkedIn,15600,Sarah Mitchell,PAID,INV-LKD2-20250422,Job posting credits
+EXP-10029,2025-04-25,Engineering,Emergency,CloudOps Inc.,142300,Priya Nair,PENDING,INV-CO-20250425,Emergency cloud capacity - INC-2045 response
+EXP-10030,2025-04-28,Engineering,Hardware,HP Enterprise,87200,Priya Nair,PENDING,INV-HPE-20250428,Replacement server for DB-PROD-03 failure (INC-2045)
+EXP-10031,2025-05-02,Compliance,Audit,KPMG,55000,Alexandra Reeves,PAID,INV-KPM-20250502,SOC 2 audit preparation
+EXP-10032,2025-05-05,Finance,Vendor,SecureNet Solutions,87500,Diana Forsythe,PENDING,INV-SN-20250505,Network security services (62 days outstanding)
+EXP-10033,2025-05-08,Engineering,Monitoring,Datadog,32400,Priya Nair,PAID,INV-DD-20250508,APM platform
+EXP-10034,2025-05-12,HR,Benefits,Aetna Insurance,234000,Sarah Mitchell,PAID,INV-AET-20250512,Monthly benefits premium
+EXP-10035,2025-05-16,Finance,Emergency,Manual Processing,28400,Diana Forsythe,PAID,INV-INT-20250516,INC-2045 manual payroll processing costs for 847 employees

@@ -1,0 +1,87 @@
+VAULTCORP ENTERPRISES — COMPLIANCE & LEGAL DIVISION
+INFORMATION SECURITY COMPLIANCE POLICY
+DOCUMENT ID: COMP-SEC-2025-001 | VERSION: 4.0
+CLASSIFICATION: INTERNAL | FRAMEWORKS: ISO 27001, SOC 2 Type II, NIST CSF
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: SECURITY GOVERNANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VaultCorp Enterprises maintains a comprehensive Information Security Management System (ISMS) certified to ISO 27001:2022. The CISO (Marcus Bell) is responsible for ISMS maintenance. Security reviews occur quarterly.
+
+Security Committee Members:
+  - Marcus Bell, CISO
+  - Alexandra Reeves, Chief Compliance Officer
+  - Priya Nair, VP Engineering
+  - Diana Forsythe, CFO
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: ACCESS CONTROL STANDARDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2.1 PRINCIPLE OF LEAST PRIVILEGE
+All system access must follow least-privilege principles. Users receive only the minimum access necessary to perform their job functions.
+
+2.2 ROLE-BASED ACCESS CONTROL (RBAC)
+Access is granted based on job role, not individual request:
+  - Admin: Full system access
+  - HR_Manager: HR systems, attendance, payroll (read)
+  - Finance_Analyst: Financial systems, audit reports, budgets
+  - Engineer: Infrastructure systems, incident reports, deployment systems
+  - Compliance_Officer: All audit logs, compliance documents, GDPR records
+  - Employee: Self-service HR portal only
+
+2.3 PRIVILEGED ACCESS MANAGEMENT (PAM)
+Production database access requires:
+  - MFA (multi-factor authentication)
+  - Just-in-time (JIT) access provisioning
+  - Session recording and audit logging
+  - Automatic 8-hour session expiration
+
+2.4 ACCESS REVIEWS
+Quarterly access reviews are mandatory. Managers must certify all team member access rights. Orphaned accounts must be disabled within 24 hours of employee departure.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: INCIDENT RESPONSE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Security Incident Classification:
+  P1 Critical: Active breach, ransomware, data exfiltration — Response: 15 minutes
+  P2 High:     Unauthorized access attempt, policy violation — Response: 1 hour
+  P3 Medium:   Security misconfiguration, failed scans — Response: 4 hours
+  P4 Low:      Policy inquiry, minor access issue — Response: 24 hours
+
+All security incidents including INC-2045 are logged in security_alerts.json 
+and cross-referenced in audit_logs.csv.
+
+ANOMALY DETECTION: Automated detection is in place for:
+  - 5+ failed login attempts within 10 minutes from same IP (threshold exceeded during INC-2045)
+  - Off-hours privileged access (flagged in access_logs.json)
+  - Data exfiltration patterns (>100MB transfers)
+  - Geographic anomalies (login from new country)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: ENCRYPTION STANDARDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Data at rest:   AES-256 encryption (all databases and storage)
+Data in transit: TLS 1.3 minimum (TLS 1.0/1.1 disabled)
+Key management: AWS KMS with 90-day rotation
+Secrets management: HashiCorp Vault with dynamic secrets
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: COMPLIANCE CERTIFICATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ISO 27001:2022 — Certified. Next audit: September 2025
+  SOC 2 Type II  — Certified. Report date: March 2025
+  PCI-DSS 4.0    — Compliant. Last assessment: January 2025
+  GDPR           — Compliant. DPO appointed: Thomas Engel
+
+Current Security Score: 94/100 (benchmarked against NIST CSF)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+APPROVED BY: Marcus Bell, CISO | Alexandra Reeves, CCO
+DOCUMENT OWNER: Compliance & Legal Division
+NEXT REVIEW: October 2025
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

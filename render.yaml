@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: vaultrag-ai-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DEBUG
+        value: false
+      - key: CHROMA_PERSIST_DIR
+        value: /tmp/chroma_db
+      - key: DATABASE_URL
+        value: ./datasets/sql/enterprise.db
+      - key: CORS_ORIGINS
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true

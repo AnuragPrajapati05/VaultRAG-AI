@@ -1,0 +1,16 @@
+log_id,timestamp,event_type,user_id,user_email,action,resource,source_ip,result,department,incident_ref,risk_level,notes
+AUDIT-8801,2025-05-16T02:03:00Z,SYSTEM_ACCESS,SYS-PAYROLL,system@vaultcorp.ai,DB_QUERY,payroll_transactions,10.0.1.45,TIMEOUT,Engineering,INC-2045,CRITICAL,Full table scan triggered pool exhaustion
+AUDIT-8802,2025-05-16T02:04:12Z,AUTH_FAILURE,EMP-1038,k.huang@vaultcorp.ai,LOGIN,AuthService,10.0.1.12,FAILED,Engineering,INC-2045,HIGH,Auth service degraded - legitimate user affected
+AUDIT-8803,2025-05-16T02:05:00Z,AUTH_FAILURE,EMP-1001,a.chen@vaultcorp.ai,LOGIN,AuthService,10.0.1.15,FAILED,Engineering,INC-2045,HIGH,Auth service degraded
+AUDIT-8804,2025-05-16T02:07:00Z,SECURITY_ALERT,UNKNOWN,unknown,BRUTE_FORCE_ATTEMPT,AuthService,192.168.33.201,BLOCKED,Unknown,INC-2045,CRITICAL,423 failed logins in 4 minutes from single IP - possible exploitation of degraded auth
+AUDIT-8805,2025-05-16T02:09:41Z,SYSTEM_ACCESS,SYS-PAYROLL,system@vaultcorp.ai,BATCH_JOB,payroll_batch_20250516,10.0.1.45,TIMEOUT,Engineering,INC-2045,CRITICAL,Payroll batch job timed out after 354 seconds
+AUDIT-8806,2025-05-16T02:17:00Z,SERVICE_FAILURE,SYS-AUTH,system@vaultcorp.ai,SERVICE_HEALTH_CHECK,AuthService,10.0.0.1,DOWN,Engineering,INC-2045,CRITICAL,Auth service completely unavailable
+AUDIT-8807,2025-05-16T02:22:00Z,ADMIN_ACTION,EMP-1038,k.huang@vaultcorp.ai,DB_FAILOVER,DB-PROD-03,10.0.1.12,INITIATED,Engineering,INC-2045,HIGH,Emergency failover to DR cluster
+AUDIT-8808,2025-05-16T04:51:22Z,SYSTEM_RESTORE,EMP-1038,k.huang@vaultcorp.ai,SERVICE_RESTORE,ALL,10.0.1.12,SUCCESS,Engineering,INC-2045,MEDIUM,All services restored after INC-2045
+AUDIT-8809,2025-05-17T09:00:00Z,DATA_ACCESS,EMP-1004,d.okafor@vaultcorp.ai,GDPR_REVIEW,payroll_access_logs,10.0.1.44,SUCCESS,Compliance,,LOW,Post-INC-2045 GDPR breach assessment - no exfiltration found
+AUDIT-8810,2025-05-17T10:30:00Z,POLICY_VIOLATION,EMP-1038,k.huang@vaultcorp.ai,DEPLOYMENT_BYPASS,DeploymentPipeline,10.0.1.12,LOGGED,Engineering,INC-2045,HIGH,Stage 4 performance validation was bypassed for v2.8.1
+AUDIT-8811,2025-05-18T14:00:00Z,DATA_ACCESS,EMP-1003,c.watts@vaultcorp.ai,REPORT_ACCESS,audit_report_2025,10.0.1.33,SUCCESS,Finance,,LOW,
+AUDIT-8812,2025-05-19T09:15:00Z,UNAUTHORIZED_ACCESS,EMP-1002,b.singh@vaultcorp.ai,DATA_ACCESS,audit_report_2025,10.0.1.22,DENIED,HR,,MEDIUM,HR user attempted to access Finance Confidential document - access denied per RBAC policy
+AUDIT-8813,2025-05-20T11:00:00Z,AUTH_SUCCESS,EMP-9999,admin@vaultcorp.ai,LOGIN,AdminPortal,10.0.1.1,SUCCESS,Admin,,LOW,Admin login from approved IP
+AUDIT-8814,2025-05-20T15:00:00Z,DATA_EXPORT,EMP-1003,c.watts@vaultcorp.ai,EXPORT,department_budget,10.0.1.33,SUCCESS,Finance,,LOW,Q2 budget review export
+AUDIT-8815,2025-05-21T08:00:00Z,SECURITY_SCAN,SYS-SEC,security@vaultcorp.ai,VULNERABILITY_SCAN,ALL_SYSTEMS,10.0.0.10,COMPLETED,Compliance,,LOW,Weekly automated security scan - 0 critical findings

@@ -1,0 +1,75 @@
+VAULTCORP ENTERPRISES — ENGINEERING DIVISION
+CRITICAL INCIDENT REPORT — INC-2045
+INCIDENT DATE: MAY 16, 2025 | REPORT DATE: MAY 17, 2025
+CLASSIFICATION: INTERNAL — ENGINEERING & MANAGEMENT
+DOCUMENT ID: ENG-INC-2025-2045
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+INCIDENT SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Incident ID:      INC-2045
+Severity:         P1 — CRITICAL
+Start Time:       2025-05-16 02:03:47 UTC
+End Time:         2025-05-16 04:51:22 UTC
+Total Duration:   2 hours 47 minutes 35 seconds
+Affected Systems: Payroll Processing Service, Authentication Service, Database Cluster DB-PROD-03
+Affected Users:   847 employees (payroll payment delayed)
+Financial Impact: $287,300 (emergency infrastructure + manual processing costs)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIMELINE OF EVENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+02:03:47 UTC — Automated monitoring alert: DB-PROD-03 connection pool exhausted
+02:04:12 UTC — PayrollService begins failing authentication handshakes
+02:05:33 UTC — First PagerDuty alert sent to on-call engineer (Kevin Huang, EMP-1038)
+02:07:00 UTC — Authentication service enters degraded mode; 423 failed login attempts recorded
+02:09:41 UTC — Payroll batch job timeout after 5:54 min (normal: 45 sec)
+02:11:00 UTC — Incident escalated to P1; Engineering VP (Priya Nair) notified
+02:17:00 UTC — Authentication service fully down; all payroll processing halted
+02:22:00 UTC — Decision to initiate DB-PROD-03 failover to DR cluster
+02:45:00 UTC — Failover complete; services begin recovering
+03:12:00 UTC — Payroll service restored; reprocessing queue initiated
+04:51:22 UTC — Full service restoration confirmed; incident closed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ROOT CAUSE ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PRIMARY CAUSE: Database connection pool exhaustion on DB-PROD-03 caused by an
+unoptimized query introduced in deployment v2.8.1 (deployed May 15, 2025 at 18:30 UTC).
+The query performed a full table scan on the payroll_transactions table (12.4M rows)
+without utilizing the existing index, consuming all available connections within 4 minutes.
+
+CONTRIBUTING FACTORS:
+1. Deployment v2.8.1 was not tested against production-scale data volume
+2. Connection pool monitoring threshold was set too high (95% vs recommended 80%)
+3. Authentication service lacked circuit breaker for database dependency failures
+4. On-call engineer required 2 minutes to acknowledge alert (SLA: 1 minute)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REMEDIATION ACTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMMEDIATE:
+  [DONE] Rolled back deployment v2.8.1 to v2.8.0
+  [DONE] Executed database failover to DR cluster
+  [DONE] Reprocessed all 847 delayed payroll transactions
+  [DONE] Notified affected employees via corporate email
+
+SHORT-TERM (Due: May 30, 2025):
+  [IN PROGRESS] Add circuit breaker pattern to AuthService database dependency
+  [IN PROGRESS] Lower connection pool alert threshold to 80%
+  [PENDING] Mandatory load testing at 2x production data volume for all DB-touching deployments
+
+LONG-TERM (Due: Q3 2025):
+  [PENDING] Implement query execution plan validation in CI/CD pipeline
+  [PENDING] Deploy read replicas to isolate batch processing from OLTP workloads
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUTHORED BY: Kevin Huang, Senior SRE | Priya Nair, VP Engineering
+REVIEWED BY: Marcus Whitfield, CEO | Robert Chambers, Internal Audit
+RELATED LOGS: server_logs.json (entries 2025-05-16T02:03 to 2025-05-16T04:51)
+RELATED DATA: server_metrics.csv, payroll.csv, audit_logs.csv
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

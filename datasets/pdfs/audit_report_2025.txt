@@ -1,0 +1,74 @@
+VAULTCORP ENTERPRISES — FINANCE DIVISION
+INTERNAL AUDIT REPORT — FISCAL YEAR 2025 Q1
+DOCUMENT ID: FIN-AUD-2025-Q1 | CLASSIFICATION: CONFIDENTIAL — FINANCE ONLY
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXECUTIVE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This report presents the findings of the internal audit conducted for VaultCorp Enterprises for the period January 1, 2025 through March 31, 2025. The audit was performed by the Internal Audit Committee in accordance with the Institute of Internal Auditors (IIA) standards.
+
+Overall audit rating: SATISFACTORY WITH FINDINGS
+
+Total audited expenditure: $18,742,300
+Identified discrepancies: $324,500 (1.73% of total)
+High-risk findings: 2
+Medium-risk findings: 5
+Low-risk findings: 11
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: BUDGET VARIANCE ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1.1 DEPARTMENT BUDGET OVERVIEW (Q1 2025)
+  Engineering Department:
+    Allocated: $5,200,000 | Spent: $5,487,300 | Variance: +$287,300 (OVER)
+    Note: Overage attributed to emergency infrastructure response costs related to INC-2045.
+    
+  Finance Department:
+    Allocated: $2,100,000 | Spent: $1,987,400 | Variance: -$112,600 (UNDER)
+    
+  HR Department:
+    Allocated: $1,800,000 | Spent: $1,791,200 | Variance: -$8,800 (UNDER)
+    
+  Compliance Department:
+    Allocated: $950,000  | Spent: $987,800   | Variance: +$37,800 (OVER)
+    Note: Additional GDPR compliance consulting fees incurred.
+
+1.2 HIGH-RISK FINDING #1: ENGINEERING BUDGET OVERRUN
+The Engineering department exceeded its Q1 budget by 5.5%. Root cause: emergency procurement of replacement server hardware following the infrastructure failure documented in Incident Report INC-2045 (May 16, 2025). The procurement bypassed the standard three-bid process due to urgency. Recommendation: Establish an emergency procurement protocol with post-hoc audit triggers.
+
+1.3 HIGH-RISK FINDING #2: PAYROLL PROCESSING DELAY
+The payroll processing failure on May 16, 2025 (Incident INC-2045) resulted in delayed payments for 847 employees. Manual processing costs totaled $28,400. Legal review is ongoing regarding potential labor law violations. HR and Finance are jointly managing remediation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: EXPENSE ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2.1 TOP EXPENSE CATEGORIES (Q1 2025)
+  Personnel costs:        $12,340,000  (65.8%)
+  Infrastructure/IT:      $3,210,000   (17.1%)
+  Vendor contracts:       $1,890,000   (10.1%)
+  Travel & expenses:      $680,000     (3.6%)
+  Training & development: $622,300     (3.3%)
+
+2.2 VENDOR RISK
+Three vendors have outstanding invoices exceeding 60 days:
+  - CloudOps Inc.: $142,300 (68 days)
+  - SecureNet Solutions: $87,500 (71 days)
+  - DataVault Partners: $63,200 (64 days)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: COMPLIANCE STATUS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Financial controls compliance score: 87/100
+SOX compliance: COMPLIANT (last assessed February 2025)
+PCI-DSS: COMPLIANT
+Internal control weaknesses: 3 noted, all in remediation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PREPARED BY: Robert Chambers, Chief Audit Executive
+REVIEWED BY: Diana Forsythe, CFO
+CLASSIFICATION: CONFIDENTIAL — FINANCE DIVISION ONLY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

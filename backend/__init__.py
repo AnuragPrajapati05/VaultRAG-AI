@@ -1,0 +1,1 @@
+"""VaultRAG AI backend package."""

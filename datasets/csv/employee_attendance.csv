@@ -1,0 +1,31 @@
+employee_id,name,department,date,status,check_in,check_out,hours_worked,leave_type,notes
+EMP-1001,Alice Chen,Engineering,2025-05-12,Present,08:02,17:15,9.22,,
+EMP-1001,Alice Chen,Engineering,2025-05-13,Present,07:58,17:30,9.53,,
+EMP-1001,Alice Chen,Engineering,2025-05-14,Present,08:10,17:00,8.83,,
+EMP-1001,Alice Chen,Engineering,2025-05-15,Present,08:00,21:30,13.50,,Emergency deployment v2.8.1
+EMP-1001,Alice Chen,Engineering,2025-05-16,Present,02:15,07:00,4.75,,INC-2045 on-call response
+EMP-1002,Bob Singh,HR,2025-05-12,Present,09:00,17:30,8.50,,
+EMP-1002,Bob Singh,HR,2025-05-13,Present,09:05,17:00,7.92,,
+EMP-1002,Bob Singh,HR,2025-05-14,Absent,,,0,Sick,Medical appointment
+EMP-1002,Bob Singh,HR,2025-05-15,Present,09:00,17:30,8.50,,
+EMP-1002,Bob Singh,HR,2025-05-16,Present,09:00,17:00,8.00,,Handled INC-2045 employee notifications
+EMP-1003,Carol Watts,Finance,2025-05-12,Present,08:30,17:30,9.00,,
+EMP-1003,Carol Watts,Finance,2025-05-13,Present,08:45,17:00,8.25,,
+EMP-1003,Carol Watts,Finance,2025-05-14,Present,08:30,17:30,9.00,,
+EMP-1003,Carol Watts,Finance,2025-05-15,Present,08:30,18:00,9.50,,Q1 audit review
+EMP-1003,Carol Watts,Finance,2025-05-16,Present,09:00,19:00,10.00,,INC-2045 manual payroll remediation
+EMP-1004,David Okafor,Compliance,2025-05-12,Present,08:00,16:30,8.50,,
+EMP-1004,David Okafor,Compliance,2025-05-13,Present,08:00,17:00,9.00,,
+EMP-1004,David Okafor,Compliance,2025-05-14,Present,08:00,16:30,8.50,,
+EMP-1004,David Okafor,Compliance,2025-05-15,Present,08:00,17:00,9.00,,
+EMP-1004,David Okafor,Compliance,2025-05-16,Present,07:30,18:30,11.00,,INC-2045 GDPR breach assessment
+EMP-1005,Emma Liu,Engineering,2025-05-12,Present,08:00,17:00,9.00,,
+EMP-1005,Emma Liu,Engineering,2025-05-13,PTO,,,0,Annual Leave,Pre-approved
+EMP-1005,Emma Liu,Engineering,2025-05-14,PTO,,,0,Annual Leave,Pre-approved
+EMP-1005,Emma Liu,Engineering,2025-05-15,Present,08:00,22:00,14.00,,Deployment support
+EMP-1005,Emma Liu,Engineering,2025-05-16,Present,02:00,08:00,6.00,,INC-2045 recovery support
+EMP-1038,Kevin Huang,Engineering,2025-05-12,Present,08:00,17:30,9.50,,
+EMP-1038,Kevin Huang,Engineering,2025-05-13,Present,08:00,17:00,9.00,,
+EMP-1038,Kevin Huang,Engineering,2025-05-14,Present,08:00,17:30,9.50,,
+EMP-1038,Kevin Huang,Engineering,2025-05-15,Present,08:00,23:59,15.98,,Deployment v2.8.1 lead engineer
+EMP-1038,Kevin Huang,Engineering,2025-05-16,Present,02:05,12:00,9.92,,INC-2045 on-call primary responder

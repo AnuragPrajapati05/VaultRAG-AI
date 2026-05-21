@@ -1,0 +1,49 @@
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# Node
+node_modules/
+dist/
+build/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# Vector DB and local generated data
+chroma_db/
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+
+# Logs and temporary files
+*.log
+logs/
+temp/
+tmp/
+backend_server*.log
+frontend_server*.log
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Deployment
+.vercel/
+.netlify/

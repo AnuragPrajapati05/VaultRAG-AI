@@ -1,0 +1,16 @@
+employee_id,name,department,role,base_salary,bonus,total_compensation,pay_period,payment_date,payment_status,bank_account_masked,notes
+EMP-1001,Alice Chen,Engineering,Senior Software Engineer,145000,18000,163000,2025-05-01/2025-05-15,2025-05-16,DELAYED,****7823,Delayed due to INC-2045 payroll failure; manual payment issued 2025-05-17
+EMP-1002,Bob Singh,HR,HR Business Partner,95000,8500,103500,2025-05-01/2025-05-15,2025-05-16,DELAYED,****2291,Delayed due to INC-2045 payroll failure; manual payment issued 2025-05-17
+EMP-1003,Carol Watts,Finance,Senior Financial Analyst,118000,14000,132000,2025-05-01/2025-05-15,2025-05-16,DELAYED,****4412,Delayed due to INC-2045 payroll failure; manual payment issued 2025-05-17
+EMP-1004,David Okafor,Compliance,Compliance Analyst,102000,9000,111000,2025-05-01/2025-05-15,2025-05-16,DELAYED,****8833,Delayed due to INC-2045 payroll failure; manual payment issued 2025-05-17
+EMP-1005,Emma Liu,Engineering,DevOps Engineer,138000,15000,153000,2025-05-01/2025-05-15,2025-05-16,DELAYED,****5567,Delayed due to INC-2045 payroll failure; manual payment issued 2025-05-17
+EMP-1006,Frank Torres,HR,Talent Acquisition Specialist,88000,6000,94000,2025-05-01/2025-05-15,2025-05-16,DELAYED,****3349,Delayed due to INC-2045 payroll failure; manual payment issued 2025-05-17
+EMP-1007,Grace Kim,Finance,Financial Controller,155000,22000,177000,2025-05-01/2025-05-15,2025-05-16,DELAYED,****9912,Delayed due to INC-2045 payroll failure; manual payment issued 2025-05-17
+EMP-1008,Henry Park,Engineering,Principal Architect,175000,28000,203000,2025-05-01/2025-05-15,2025-05-16,DELAYED,****1123,Delayed due to INC-2045 payroll failure; manual payment issued 2025-05-17
+EMP-1038,Kevin Huang,Engineering,Senior SRE,148000,20000,168000,2025-05-01/2025-05-15,2025-05-16,DELAYED,****6678,Delayed due to INC-2045; manual payment issued 2025-05-17; overtime supplement pending
+EMP-1001,Alice Chen,Engineering,Senior Software Engineer,145000,18000,163000,2025-04-16/2025-04-30,2025-04-30,PROCESSED,****7823,
+EMP-1002,Bob Singh,HR,HR Business Partner,95000,8500,103500,2025-04-16/2025-04-30,2025-04-30,PROCESSED,****2291,
+EMP-1003,Carol Watts,Finance,Senior Financial Analyst,118000,14000,132000,2025-04-16/2025-04-30,2025-04-30,PROCESSED,****4412,
+EMP-1004,David Okafor,Compliance,Compliance Analyst,102000,9000,111000,2025-04-16/2025-04-30,2025-04-30,PROCESSED,****8833,
+EMP-1005,Emma Liu,Engineering,DevOps Engineer,138000,15000,153000,2025-04-16/2025-04-30,2025-04-30,PROCESSED,****5567,
+EMP-1038,Kevin Huang,Engineering,Senior SRE,148000,20000,168000,2025-04-16/2025-04-30,2025-04-30,PROCESSED,****6678,

@@ -1,0 +1,62 @@
+VAULTCORP ENTERPRISES — ENGINEERING DIVISION
+SYSTEM DEPLOYMENT MANUAL — PRODUCTION ENVIRONMENT
+DOCUMENT ID: ENG-DEP-2025-001 | VERSION: 3.1 | CLASSIFICATION: INTERNAL
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: DEPLOYMENT OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This manual defines the approved procedures for deploying software to VaultCorp's production environment. All deployments must follow this process. Deviations require VP Engineering approval.
+
+Deployment Windows:
+  Standard Window:  Tuesday & Thursday, 14:00–16:00 UTC
+  Emergency Window: Any time, requires P1 Incident declaration + VP sign-off
+
+1.1 DEPLOYMENT PIPELINE STAGES
+  Stage 1: Code Review — Minimum 2 senior engineer approvals required
+  Stage 2: Automated Testing — Unit, integration, and security scans must pass
+  Stage 3: Staging Deployment — 24-hour bake time minimum
+  Stage 4: Performance Validation — Load test at 150% expected peak traffic
+  Stage 5: Production Deployment — Blue/green deployment with 5-minute health check
+  Stage 6: Post-Deployment Monitoring — 2-hour enhanced monitoring period
+
+1.2 ROLLBACK PROCEDURE
+  If critical errors detected within 2 hours of deployment:
+  1. Declare incident in PagerDuty
+  2. Execute: ./scripts/rollback.sh --target=<previous_version>
+  3. Verify database schema compatibility
+  4. Confirm service health via monitoring dashboard
+  5. Notify stakeholders within 15 minutes
+
+IMPORTANT: The deployment of v2.8.1 on May 15, 2025 bypassed Stage 4 
+(Performance Validation) due to time pressure, directly contributing to INC-2045. 
+This bypass was unauthorized. Disciplinary review is pending.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: INFRASTRUCTURE OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Production Cluster: AWS us-east-1 (primary), us-west-2 (DR)
+Database: PostgreSQL 15.2 on RDS (DB-PROD-01, DB-PROD-02, DB-PROD-03)
+Cache: Redis Cluster (CACHE-PROD-01 through CACHE-PROD-04)
+Load Balancer: AWS ALB with WAF enabled
+Monitoring: Datadog + PagerDuty + CloudWatch
+
+DB-PROD-03 is the dedicated database for the Payroll Processing Service.
+Following INC-2045, DB-PROD-03 has been migrated to enhanced monitoring.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: SECURITY REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All production deployments must:
+  - Pass SAST (Static Application Security Testing) with zero critical findings
+  - Pass dependency vulnerability scan (no HIGH or CRITICAL CVEs)
+  - Include secrets scanning — no credentials in code
+  - Deployment credentials rotated every 90 days
+  - All deployment activities logged to audit_logs.csv
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+APPROVED BY: Priya Nair, VP Engineering | Marcus Whitfield, CEO
+LAST UPDATED: April 10, 2025 | NEXT REVIEW: October 2025
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

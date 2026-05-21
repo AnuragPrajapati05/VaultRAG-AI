@@ -6,9 +6,10 @@ Enterprise Secure RAG Intelligence Platform with role-based access control, mult
 
 | Surface | URL |
 | --- | --- |
-| Frontend | `TBD - Vercel URL` |
-| Backend API | `TBD - Render URL` |
-| Health Check | `TBD - Render URL/health` |
+| GitHub Repository | https://github.com/AnuragPrajapati05/VaultRAG-AI |
+| Frontend | https://frontend-one-ruby-nl7kvoep8t.vercel.app |
+| Backend API | `Deploy on Render from render.yaml` |
+| Health Check | `https://vaultrag-ai-backend.onrender.com/health` after Render deployment |
 
 ## Features
 
@@ -142,6 +143,7 @@ VITE_API_URL=https://your-backend-url.onrender.com
 
 ### Backend on Render
 
+- Blueprint link: https://render.com/deploy?repo=https://github.com/AnuragPrajapati05/VaultRAG-AI
 - Root directory: repository root
 - Build command: `pip install -r requirements.txt`
 - Start command: `uvicorn backend.app:app --host 0.0.0.0 --port $PORT`
@@ -154,6 +156,7 @@ VITE_API_URL=https://your-backend-url.onrender.com
 
 ### Frontend on Vercel
 
+- Live URL: https://frontend-one-ruby-nl7kvoep8t.vercel.app
 - Root directory: `frontend`
 - Build command: `npm run build`
 - Output directory: `dist`

@@ -15,6 +15,12 @@ git push -u origin main
 
 Use the `render.yaml` blueprint or configure a Web Service manually.
 
+Blueprint URL:
+
+```text
+https://render.com/deploy?repo=https://github.com/AnuragPrajapati05/VaultRAG-AI
+```
+
 Settings:
 
 - Build command: `pip install -r requirements.txt`
@@ -32,6 +38,12 @@ DEBUG=false
 ```
 
 ## Vercel Frontend
+
+Current production deployment:
+
+```text
+https://frontend-one-ruby-nl7kvoep8t.vercel.app
+```
 
 Settings:
 
